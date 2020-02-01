@@ -1,0 +1,12 @@
+# Ignore .idea #
+################
+.idea*
+
+# Ignore Jupyter notebook checkpoints #
+#######################################
+.ipynb_checkpoints/
+
+# Ignore big banana #
+#####################
+
+/Navigation/Banana_Linux_NoVis
