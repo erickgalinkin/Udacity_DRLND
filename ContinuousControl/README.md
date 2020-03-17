@@ -69,7 +69,9 @@ Follow the instructions in `Reacher_Solution.ipynb` to get started with training
 
 ### Results
 
-![Plot](https://github.com/erickgalinkin/Udacity_DRLND/blob/master/ContinuousControl/continuous_control_scores.png) The environment was solved in **134** episodes (currently).
+![Plot](https://github.com/erickgalinkin/Udacity_DRLND/blob/master/ContinuousControl/continuous_control_scores.png) 
+
+The environment was solved in **134** episodes (currently).
 
 ### Dependencies
 
