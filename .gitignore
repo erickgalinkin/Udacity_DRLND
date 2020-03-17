@@ -8,5 +8,12 @@
 
 # Ignore big banana #
 #####################
-
 /Navigation/Banana_Linux_NoVis
+
+# Ignore logs #
+###############
+*.log
+
+# Ignore Reacher #
+##################
+/ContinuousControl/Reacher_Linux
