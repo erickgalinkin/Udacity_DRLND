@@ -8,7 +8,7 @@
 
 # Ignore big banana #
 #####################
-/Navigation/Banana_Linux_NoVis
+Navigation/Banana_Linux_NoVis
 
 # Ignore logs #
 ###############
@@ -16,8 +16,8 @@
 
 # Ignore Reacher #
 ##################
-/ContinuousControl/Reacher_Linux
+ContinuousControl/Reacher_Linux
 
 # Ignore tennis #
 #################
-/CollaborationAndCompetition/Tennis_Linux_Novis
+CollaborationAndCompetition/Tennis_Linux_Novis
