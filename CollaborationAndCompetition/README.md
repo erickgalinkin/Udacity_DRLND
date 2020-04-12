@@ -56,4 +56,8 @@ Follow the instructions in `Tennis.ipynb` to get started with training your own 
 
 ![Scores][image3]       ![Rolling Average][image2]
 
-The environment was solved in 2234 episodes. For future improvements, an algorithm like PPO or A3C could be used in place of DDPG, which is known to be unstable in training. 
+The environment was solved in 2234 episodes. 
+
+### Future Work
+For future improvements, an algorithm like PPO or A3C could be used in place of DDPG, which is known to be unstable in training. 
+Additionally, since many episodes yield zero reward, implementing something like [Prioritized Experience Replay](https://arxiv.org/pdf/1511.05952.pdf) should speed up learning.
