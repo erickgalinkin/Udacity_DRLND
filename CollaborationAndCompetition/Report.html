@@ -13098,9 +13098,9 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">copy</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
-<span class="kn">from</span> <span class="nn">unityagents</span> <span class="kn">import</span> <span class="n">UnityEnvironment</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span><span class="p">,</span> <span class="n">deque</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm_notebook</span>
+<span class="kn">from</span> <span class="nn">unityagents</span> <span class="k">import</span> <span class="n">UnityEnvironment</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">namedtuple</span><span class="p">,</span> <span class="n">deque</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="k">import</span> <span class="n">tqdm_notebook</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
@@ -13262,7 +13262,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
     <span class="k">return</span> <span class="p">(</span><span class="o">-</span><span class="n">lim</span><span class="p">,</span> <span class="n">lim</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Actor</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">fc1_units</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">fc2_units</span><span class="o">=</span><span class="mi">128</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">fc1_units</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">fc2_units</span><span class="o">=</span><span class="mi">128</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Params</span>
 <span class="sd">        ======</span>
@@ -13289,7 +13289,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
     
 <span class="k">class</span> <span class="nc">Critic</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">fc1_units</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">fc2_units</span><span class="o">=</span><span class="mi">128</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">fc1_units</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">fc2_units</span><span class="o">=</span><span class="mi">128</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Params</span>
 <span class="sd">        ======</span>
@@ -13330,7 +13330,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ReplayBuffer</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Buffer to replay experience tuples&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">buffer_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize ReplayBuffer class</span>
 <span class="sd">        </span>
 <span class="sd">        Params</span>
@@ -13361,7 +13361,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
         
         <span class="k">return</span> <span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">actions</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">next_states</span><span class="p">,</span> <span class="n">dones</span><span class="p">)</span>
     
-    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Return the length of the memory&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">memory</span><span class="p">)</span>
 
@@ -13369,7 +13369,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
 <span class="k">class</span> <span class="nc">OUNoise</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Ornstein-Uhlenbeck noise process to be added to the actions.&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize parameters and noise process.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">mu</span> <span class="o">=</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span>
@@ -13399,7 +13399,7 @@ The state for the first agent looks like: [ 0.          0.          0.          
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MADDPG_Agent</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">buffer_size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">update_every</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="p">,</span> <span class="n">buffer_size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">),</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">update_every</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> 
                  <span class="n">no_agents</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">001</span><span class="p">,</span> <span class="n">beta</span><span class="o">=.</span><span class="mi">001</span><span class="p">,</span> <span class="n">gamma</span><span class="o">=.</span><span class="mi">99</span><span class="p">,</span> <span class="n">tau</span><span class="o">=.</span><span class="mi">008</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.99</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Initialize agent attributes</span>
 <span class="sd">        Params</span>
@@ -13772,6 +13772,15 @@ Target reward achieved in 2234 episodes! Average score: 0.5010
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Future-Improvement">Future Improvement<a class="anchor-link" href="#Future-Improvement">&#182;</a></h2><p>The stability of the algorithm is still questionable - using something like <a href="https://arxiv.org/pdf/1602.01783.pdf">A3C</a> instead may stabilize training.
+Additionally, since so many training epochs feature zero reward, implementing <a href="https://arxiv.org/pdf/1511.05952.pdf">Prioritized Experience Replay</a> may speed up training by prioritizing epochs with nonzero reward.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
