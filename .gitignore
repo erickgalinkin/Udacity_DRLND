@@ -17,3 +17,7 @@
 # Ignore Reacher #
 ##################
 /ContinuousControl/Reacher_Linux
+
+# Ignore tennis #
+#################
+/CollaborationAndCompetition/Tennis_Linux_Novis
